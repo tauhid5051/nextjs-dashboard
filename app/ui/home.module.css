@@ -1,0 +1,43 @@
+.shape {
+  position: absolute;
+  top: -18px;
+  left: 24px;
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 35px solid #3b82f6; /* Tailwind blue-500 */
+  opacity: 0.9;
+  animation: float 3s ease-in-out infinite;
+}
+
+.triangle {
+  position: absolute;
+  bottom: -18px;
+  right: 30px;
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 26px solid #60a5fa; /* Tailwind blue-400 */
+  opacity: 0.9;
+  animation: floatReverse 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes floatReverse {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(6px);
+  }
+}
